@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf~8">
-  <title>JavaScript Practice</title>
-  <style>
-    body {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: skyblue;
-      cursor: pointer;
-      transition: 0.8s;
-      margin: 0 8px 8px 0;
-      text-align: center;
-      line-height: 100px;
-    }
-    .win {
-      background-color: pink;
-      border-radius: 50%;
-      transform: rotate(360deg);
-    }
-    .lose {
-      transform: scale(0.9);
-    }
-  </style>
+  <meta charaset="utf-8">
+  <title>太郎のポートフォリオサイト</title>
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="太郎のポートフォリオサイトです">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+  <header>
+    <div class="container">
+      <div class="icon">
+        <img src="img/taro.png" width="120" height="120" alt="太郎のアイコンです">
+      </div>
+      <div class="info">
 
-  <script>
-    `use strict`;
+        <h1>山田太郎 </h1>
+        <p>UI/UXデザイナー見習いです</p>
+        <ul>
+          <li>
+            <a href="https://dotinstall.com" target="_blank">
+              <img src="img/blog.png" width="20" height="20" alt=ブログサイトへのリンク画像です>
+            </a>
+          </li>
+          <li>
+            <a href="https://dotinstall.com" target="_blank">
+              <img src="img/photos.png" width="20" height="20" alt=写真サイトへのリンク画像です>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="works">
+    <h1>WORKS</h1>
 
-    const num = 5;
-    const winner = Math.floor(Math.random() * num); // 0 - 4
+    <section>
+    <img src="img/work1.png" width="400" height="260" alt="勇者ゲームの紹介画像">
+    <h1>勇者ゲーム</h1>
+    <p>楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。</p>
+    </section>
+  
+    <section>
+    <img src="img/work2.png" width="400" height="260" alt="宝探しゲームの紹介画像">
+    <h1>宝探しゲーム</h1>
+    <p>楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。</p>
+    </section>
+  
+   <section>
+    <img src="img/work3.png" width="400" height="260" alt="神経衰弱の紹介画像">
+    <h1>神経衰弱</h1>
+    <p>楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。</p>
+    </section>
+  </section>
 
-    for(let i = 0; i < num; i++){
-      const div = document.createElement('div');
-      div.classList.add('box');
 
-      div.addEventListener('click', () => {
-        if (i === winner ) {
-          div.textContent = 'Win!';
-          div.classList.add('win');
-        } else {
-          div.textContent = 'Lose!';
-          div.classlist.add('lose');
-        }
-      });
-      document.body.appendChild(div);
-    }
-    
-  </script>
+  <footer>
+    <p>(c) dotinstall.com</p>
+  </footer>
 </body>
 </html>
+
